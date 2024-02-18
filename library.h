@@ -4,14 +4,9 @@
 #include <type_traits>
 #include <variant>
 #include <functional>
-#include <mutex>
 #include <condition_variable>
-#include <future>
-#include <atomic>
-#include <barrier>
 #include <queue>
-#include <thread>
-#include <array>
+#include <mutex>
 
 namespace CppChan {
     template<typename... Args>
