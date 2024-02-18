@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     };
     CppChan::Channel<DoNothing, MultiplyThese, WaitAWhile> work_channel{ [](const DoNothing& d){},
         [&] (const MultiplyThese& nums) {
-            std::string msg = std::to_string(nums.a) + " * " + std::to_string(nums.b) + " = " + std::to_string(nums.a + nums.b);
+            std::string msg = std::to_string(nums.a) + " * " + std::to_string(nums.b) + " = " + std::to_string(nums.a * nums.b);
             printer_channel.transmitter.send(Print{msg});
             jobs_left--;
         },
